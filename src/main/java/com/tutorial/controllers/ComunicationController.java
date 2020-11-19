@@ -31,6 +31,7 @@ public class ComunicationController {
 
         } catch (RestClientException e) {
             return parser.parseMap(e.getMessage());
+            
         }
         
     }
