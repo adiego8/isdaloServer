@@ -1,4 +1,6 @@
 package com.tutorial.services;
+import com.tutorial.repositories.DocumentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -7,6 +9,10 @@ public class MultiServices {
 
     //Properties 
     RestTemplate httpRequest;
+
+    //Autowire the Respository for the documents data
+    @Autowired
+    public DocumentRepository documentRepository;
 
     //Service default constructor
     MultiServices(){   
